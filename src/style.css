@@ -1,0 +1,92 @@
+@import url(./calc.css);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-light: #FFFFFF;
+    --bg-dark: #0f0f0f;
+    --bg-primary: #FFFFFF;
+    /* Adicione esta linha */
+    --font-primary: 'Inter', sans-serif;
+}
+
+button {
+    border: none;
+    outline: none;
+    appearance: none;
+    background: transparent;
+    color: inherit;
+    cursor: pointer;
+}
+
+
+/* ====== TEMAS ====== */
+body[data-tema="dark"] {
+    background-color: #0f0f0f;
+    color: white;
+    background-image: linear-gradient(#161616 1px, transparent 1px), linear-gradient(to right, #161616 1px, #0f0f0f 1px);
+    background-size: 20px 20px;
+    transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out, background-image 0.4s ease-in-out, opacity 0.4s ease;
+    opacity: 1;
+}
+
+body[data-tema="light"] {
+    background-color: #f5f5f5;
+    color: black;
+    background-image: linear-gradient(#eaeaea 1px, transparent 1px), linear-gradient(to right, #eaeaea 1px, #f5f5f5 1px);
+    background-size: 20px 20px;
+    transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out, background-image 0.4s ease-in-out, opacity 0.4s ease;
+    opacity: 1;
+}
+
+body {
+    font-family: var(--font-primary);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    background-color: var(--bg-dark);
+    /* color of backgound */
+    color: white;
+    /* font color */
+    /* background lines */
+    background-image: linear-gradient(#161616 1px, transparent 1px), linear-gradient(to right, #161616 1px, #0f0f0f 1px);
+    background-size: 20px 20px;
+    transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out, background-image 0.4s ease-in-out, opacity 0.4s ease;
+    opacity: 1;
+}
+
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    /* Ocupa a altura total da viewport */
+}
+
+
+.button-primary {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 12px;
+    background-color: var(--bg-dark);
+    border-radius: 8px;
+    border: 2px solid #FFFFFF;
+    font-family: var(--font-primary);
+    font-size: 16px;
+    cursor: pointer;
+    color: var(--bg-primary);
+    overflow: none;
+    transition: all 200ms ease-in-out;
+}
+
+.button-primary:hover {
+    background-color: #1a1b1bcc;
+    color: #f7f3f3cc;
+}
