@@ -47,6 +47,7 @@ body {
     font-family: var(--font-primary);
     width: 100%;
     height: 100vh;
+    overflow: hidden;
     display: flex;
     background-color: var(--bg-dark);
     /* color of backgound */
@@ -61,12 +62,13 @@ body {
 
 .main {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: center; /* alinhamento horizontal */
+    /* justify-content: center; */ /* Alinhamento vertical */
+    margin-top: 2rem;
     flex-direction: column;
     width: 100%;
     height: 100vh;
-    /* Ocupa a altura total da viewport */
+    gap: 2rem;
 }
 
 

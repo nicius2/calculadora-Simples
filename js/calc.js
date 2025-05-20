@@ -1,12 +1,30 @@
 const display = document.getElementById('display');
-const botao = document.querySelectorAll('.btn');
+const botoes = document.querySelectorAll('.btn');
 
-const expressao = '';
+let expressao = '';
 
-botao.forEach(botao => {
+botoes.forEach(botao => {
     botao.addEventListener('click', () => {
-        const valor = botao.addEventListener;
+        const valor = botao.textContent;
 
-        
-    })
-})
+        if (valor === 'C') {
+            expressao = '';
+            display.textContent = '0';
+        } else if (valor === 'Del') {
+            expressao = expressao.slice(0, -1);
+            display.textContent = expressao || '0'; // Se apagar tudo, mostra "0"
+        } else if (valor === '=') {
+            try {
+                const resultado = eval(expressao);
+                display.textContent = resultado;
+                expressao = resultado.toString();
+            } catch {
+                display.textContent = 'Erro';
+                expressao = '';
+            }
+        } else {
+            expressao += valor;
+            display.textContent = expressao;
+        }
+    });
+});
