@@ -15,12 +15,12 @@
 }
 
 /* Serve para mudar a cor do corpo da calculadora quando o tema mudar */
-body[data-tema="dark"] .calculadora .display{
+body[data-tema="dark"] .calculadora .display {
     background-color: #FFFFFF;
     color: var(--bg-dark);
 }
 
-body[data-tema="light"] .calculadora .display{
+body[data-tema="light"] .calculadora .display {
     background-color: #141414;
     color: #FFFFFF;
 }
@@ -71,20 +71,66 @@ body[data-tema="light"] .calculadora .display{
     color: #FFFFFF;
 }
 
-body[data-tema="light"] .calculadora .btn{
+body[data-tema="light"] .calculadora .btn {
     color: #DCDCDC;
 }
-body[data-tema="light"] .calculadora .btn:hover{
+
+body[data-tema="light"] .calculadora .btn:hover {
     background-color: #5757a5;
 }
 
 /* Serve para mudar a cor do corpo da calculadora quando o tema mudar */
-body[data-tema="dark"] .calculadora .buttons{
+body[data-tema="dark"] .calculadora .buttons {
     background-color: #DCDCDC;
     color: #00001C;
 }
 
-body[data-tema="light"] .calculadora .buttons{
+body[data-tema="light"] .calculadora .buttons {
     background-color: #1D1D1D;
     color: #FFFFFF;
+}
+
+@media (max-width: 480px) {
+
+    body {
+        overflow: hidden;
+    }
+
+    .calculadora {
+        width: 90vw;
+        /* Mais fluido */
+        padding: 5px;
+    }
+
+    .display {
+        font-size: 1.5rem;
+        padding: 2rem 1rem;
+    }
+
+    .buttons {
+        gap: 6px;
+        padding: 0.5rem;
+    }
+
+    .btn {
+        padding: 12px;
+        /* menor que os 20px originais */
+        font-size: 1rem;
+        /* fonte menor */
+        border-radius: 8px;
+    }
+
+    /* Botão especial "=" */
+    .btn:nth-child(15) {
+        font-size: 1rem;
+        padding: 12px;
+    }
+
+    /* Botões especiais: C, DEL */
+    .btn:nth-child(17),
+    .btn:nth-child(18) {
+        font-size: 1rem;
+        padding: 12px;
+    }
+
 }
