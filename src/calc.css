@@ -15,12 +15,12 @@
 }
 
 /* Serve para mudar a cor do corpo da calculadora quando o tema mudar */
-body[data-tema="dark"] .calculadora .display {
+body[data-tema="light"] .calculadora .display {
     background-color: #FFFFFF;
     color: var(--bg-dark);
 }
 
-body[data-tema="light"] .calculadora .display {
+body[data-tema="dark"] .calculadora .display {
     background-color: #141414;
     color: #FFFFFF;
 }
@@ -44,13 +44,13 @@ body[data-tema="light"] .calculadora .display {
     border: none;
     border-radius: 10px;
     /* background-color: #f5f5f5; */
-    color: #00001C;
+    color: #FFFFFF;
     cursor: pointer;
     transition: background-color 0.2s ease, transform 0.1s ease;
 }
 
 .btn:hover {
-    background-color: #ccc;
+    background-color: #5757a5;
     transform: scale(1.05);
 }
 
@@ -72,7 +72,7 @@ body[data-tema="light"] .calculadora .display {
 }
 
 body[data-tema="light"] .calculadora .btn {
-    color: #DCDCDC;
+    color: #000000;
 }
 
 body[data-tema="light"] .calculadora .btn:hover {
@@ -80,12 +80,12 @@ body[data-tema="light"] .calculadora .btn:hover {
 }
 
 /* Serve para mudar a cor do corpo da calculadora quando o tema mudar */
-body[data-tema="dark"] .calculadora .buttons {
+body[data-tema="light"] .calculadora .buttons {
     background-color: #DCDCDC;
-    color: #00001C;
+    color: #FFFFFF;
 }
 
-body[data-tema="light"] .calculadora .buttons {
+body[data-tema="dark"] .calculadora .buttons {
     background-color: #1D1D1D;
     color: #FFFFFF;
 }
